@@ -64,7 +64,7 @@ void ACPP_BattleCharacter::SetAttackTargetActors_Implementation(const TArray<AAc
 /**
 * ƒXƒLƒ‹‚ðŽg‚¤
 */
-void ACPP_BattleCharacter::SkillExecution()
+void ACPP_BattleCharacter::SkillExecution_Implementation()
 {
 
 }

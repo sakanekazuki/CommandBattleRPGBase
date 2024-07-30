@@ -38,8 +38,9 @@ public:
 	void SetAttackTargetActors(const TArray<AActor*>& targetActors);
 	virtual void SetAttackTargetActors_Implementation(const TArray<AActor*>& targetActors);
 
-	UFUNCTION(BlueprintCallable)
+	UFUNCTION(BlueprintNativeEvent, BlueprintCallable)
 	void SkillExecution();
+	virtual void SkillExecution_Implementation();
 
 	FStatusBase GetStatus();
 	TArray<AActor*> GetTargetActors();
