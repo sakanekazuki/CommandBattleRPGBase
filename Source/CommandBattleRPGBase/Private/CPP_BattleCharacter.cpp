@@ -3,6 +3,8 @@
 
 #include "CPP_BattleCharacter.h"
 
+#include "Kismet/GameplayStatics.h"
+
 // Sets default values
 ACPP_BattleCharacter::ACPP_BattleCharacter()
 {
@@ -66,7 +68,10 @@ void ACPP_BattleCharacter::SetAttackTargetActors_Implementation(const TArray<AAc
 */
 void ACPP_BattleCharacter::SkillExecution_Implementation()
 {
-
+	for (auto actor : attackTargetActors)
+	{
+		UGameplayStatics::ApplyDamage(actor, 1, nullptr, nullptr, nullptr);
+	}
 }
 
 /**
